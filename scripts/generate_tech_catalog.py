@@ -343,7 +343,11 @@ def generate_multi_category_dataset(target_products: int = 20500, target_categor
 
 
 if __name__ == "__main__":
-    out = generate_multi_category_dataset(target_products=20500, target_categories=250)
+    import os
+
+    default_target = "6500" if os.environ.get("RENDER") else "20500"
+    target_n = int(os.environ.get("ATLASREC_CATALOG_SIZE", default_target))
+    out = generate_multi_category_dataset(target_products=target_n, target_categories=250)
     dest = Path("data/research/tech-catalog-300.json")
     dest.parent.mkdir(parents=True, exist_ok=True)
     dest.write_text(json.dumps(out, separators=(",", ":")), encoding="utf-8")
