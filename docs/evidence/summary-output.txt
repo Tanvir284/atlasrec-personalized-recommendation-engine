@@ -1,0 +1,366 @@
+{
+  "profile": "demo",
+  "synthetic": true,
+  "dataset_id": "290181bad707a761",
+  "split_id": "ce954d6330612dd1",
+  "rows": 3000,
+  "models": {
+    "popularity": {
+      "runs": 1,
+      "seeds": [
+        42
+      ],
+      "ndcg_at_10_mean": 0.08616149990114748,
+      "ndcg_at_10_stdev": null,
+      "test_queries": [
+        96
+      ],
+      "test_excluded": [
+        4
+      ],
+      "validation_ndcg": [
+        0.04396264435146321
+      ],
+      "training_seconds": [
+        0.18699999999989814
+      ],
+      "warm_queries": [
+        96
+      ]
+    },
+    "item_cf": {
+      "runs": 1,
+      "seeds": [
+        42
+      ],
+      "ndcg_at_10_mean": 0.2096986532834588,
+      "ndcg_at_10_stdev": null,
+      "test_queries": [
+        96
+      ],
+      "test_excluded": [
+        4
+      ],
+      "validation_ndcg": [
+        0.21545261944580196
+      ],
+      "training_seconds": [
+        0.07799999999951979
+      ],
+      "warm_queries": [
+        96
+      ]
+    },
+    "bpr": {
+      "runs": 1,
+      "seeds": [
+        42
+      ],
+      "ndcg_at_10_mean": 0.19339134148767886,
+      "ndcg_at_10_stdev": null,
+      "test_queries": [
+        96
+      ],
+      "test_excluded": [
+        4
+      ],
+      "validation_ndcg": [
+        0.1706642035296452
+      ],
+      "training_seconds": [
+        19.67200000000048
+      ],
+      "warm_queries": [
+        96
+      ]
+    },
+    "two_tower": {
+      "runs": 1,
+      "seeds": [
+        42
+      ],
+      "ndcg_at_10_mean": 0.18649881500131138,
+      "ndcg_at_10_stdev": null,
+      "test_queries": [
+        96
+      ],
+      "test_excluded": [
+        4
+      ],
+      "validation_ndcg": [
+        0.17594719974815848
+      ],
+      "training_seconds": [
+        50.92199999999957
+      ],
+      "warm_queries": [
+        96
+      ]
+    },
+    "two_tower_id": {
+      "runs": 1,
+      "seeds": [
+        42
+      ],
+      "ndcg_at_10_mean": 0.17768170341159553,
+      "ndcg_at_10_stdev": null,
+      "test_queries": [
+        96
+      ],
+      "test_excluded": [
+        4
+      ],
+      "validation_ndcg": [
+        0.1889542517416705
+      ],
+      "training_seconds": [
+        62.10900000000038
+      ],
+      "warm_queries": [
+        96
+      ]
+    },
+    "ranker": {
+      "runs": 1,
+      "seeds": [
+        42
+      ],
+      "ndcg_at_10_mean": 0.17675157232342234,
+      "ndcg_at_10_stdev": null,
+      "test_queries": [
+        96
+      ],
+      "test_excluded": [
+        4
+      ],
+      "validation_ndcg": [
+        0.20845760317156933
+      ],
+      "training_seconds": [
+        51.35900000000038
+      ],
+      "warm_queries": [
+        96
+      ]
+    }
+  }
+}
+{
+  "profile": "research",
+  "synthetic": false,
+  "dataset_id": "84e2fc626d8c2e73",
+  "split_id": "19e3daa971a63191",
+  "rows": 6402,
+  "models": {
+    "popularity": {
+      "runs": 3,
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "ndcg_at_10_mean": 0.0,
+      "ndcg_at_10_stdev": 0.0,
+      "test_queries": [
+        26,
+        26,
+        26
+      ],
+      "test_excluded": [
+        820,
+        820,
+        820
+      ],
+      "validation_ndcg": [
+        0.0379022065920719,
+        0.0379022065920719,
+        0.0379022065920719
+      ],
+      "training_seconds": [
+        1.1869999999998981,
+        1.780999999999949,
+        3.25
+      ],
+      "warm_queries": [
+        0,
+        0,
+        0
+      ]
+    },
+    "item_cf": {
+      "runs": 3,
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "ndcg_at_10_mean": 0.0,
+      "ndcg_at_10_stdev": 0.0,
+      "test_queries": [
+        26,
+        26,
+        26
+      ],
+      "test_excluded": [
+        820,
+        820,
+        820
+      ],
+      "validation_ndcg": [
+        0.0379022065920719,
+        0.0379022065920719,
+        0.0379022065920719
+      ],
+      "training_seconds": [
+        1.6720000000004802,
+        2.280999999999949,
+        3.0159999999996217
+      ],
+      "warm_queries": [
+        0,
+        0,
+        0
+      ]
+    },
+    "bpr": {
+      "runs": 3,
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "ndcg_at_10_mean": 0.0,
+      "ndcg_at_10_stdev": 0.0,
+      "test_queries": [
+        26,
+        26,
+        26
+      ],
+      "test_excluded": [
+        820,
+        820,
+        820
+      ],
+      "validation_ndcg": [
+        0.0379022065920719,
+        0.0379022065920719,
+        0.0379022065920719
+      ],
+      "training_seconds": [
+        19.063000000000102,
+        12.234999999999673,
+        27.375
+      ],
+      "warm_queries": [
+        0,
+        0,
+        0
+      ]
+    },
+    "two_tower": {
+      "runs": 3,
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "ndcg_at_10_mean": 0.0,
+      "ndcg_at_10_stdev": 0.0,
+      "test_queries": [
+        26,
+        26,
+        26
+      ],
+      "test_excluded": [
+        820,
+        820,
+        820
+      ],
+      "validation_ndcg": [
+        0.0379022065920719,
+        0.0379022065920719,
+        0.0379022065920719
+      ],
+      "training_seconds": [
+        15.390999999999622,
+        7.0789999999997235,
+        37.11000000000058
+      ],
+      "warm_queries": [
+        0,
+        0,
+        0
+      ]
+    },
+    "two_tower_id": {
+      "runs": 3,
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "ndcg_at_10_mean": 0.0,
+      "ndcg_at_10_stdev": 0.0,
+      "test_queries": [
+        26,
+        26,
+        26
+      ],
+      "test_excluded": [
+        820,
+        820,
+        820
+      ],
+      "validation_ndcg": [
+        0.0379022065920719,
+        0.0379022065920719,
+        0.0379022065920719
+      ],
+      "training_seconds": [
+        11.782000000000153,
+        5.389999999999418,
+        18.453999999999724
+      ],
+      "warm_queries": [
+        0,
+        0,
+        0
+      ]
+    },
+    "ranker": {
+      "runs": 3,
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "ndcg_at_10_mean": 0.0,
+      "ndcg_at_10_stdev": 0.0,
+      "test_queries": [
+        26,
+        26,
+        26
+      ],
+      "test_excluded": [
+        820,
+        820,
+        820
+      ],
+      "validation_ndcg": [
+        0.012568035926864691,
+        0.0031653251712777416,
+        0.0031653251712777416
+      ],
+      "training_seconds": [
+        32.26600000000053,
+        24.20300000000043,
+        87.35899999999947
+      ],
+      "warm_queries": [
+        0,
+        0,
+        0
+      ]
+    }
+  }
+}

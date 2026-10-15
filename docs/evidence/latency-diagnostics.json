@@ -1,0 +1,31 @@
+{
+  "windows_socket_probe": {
+    "localhost": {
+      "addresses": [
+        "127.0.0.1",
+        "::1"
+      ],
+      "connection_ms": [
+        2057.4379,
+        2031.3335,
+        2026.1946,
+        2031.0432
+      ]
+    },
+    "ipv4": {
+      "address": "127.0.0.1",
+      "connection_ms": [
+        17.1672,
+        0.9471,
+        0.8102,
+        18.2143
+      ]
+    }
+  },
+  "verified_successful_requests": 200,
+  "verified_cache_hits": 200,
+  "api_precommit_p50_ms": 194.838059,
+  "api_precommit_p95_ms": 689.83981,
+  "scope": "Same 200 IPv4 HTTP request IDs; database duration excludes commit and response transfer.",
+  "inference": "A substantial part of the observed latency is outside precommit processing. Remaining proxy/network/persistence overhead was not isolated."
+}

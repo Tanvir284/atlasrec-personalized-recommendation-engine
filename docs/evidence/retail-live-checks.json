@@ -1,0 +1,61 @@
+{
+  "checked_at": "2026-10-05T18:16:02.518596+00:00",
+  "status": "passed",
+  "catalog": {
+    "profile": "research",
+    "synthetic": false,
+    "dataset_id": "079976012a366152",
+    "source": "https://cseweb.ucsd.edu/~jmcauley/datasets/amazon_v2/",
+    "terms_url": "https://cseweb.ucsd.edu/~jmcauley/datasets/amazon_v2/",
+    "product_count": 6692,
+    "historical_interactions": 52249,
+    "historical_reviewers": 9947,
+    "recorded_application_events": 0,
+    "price_note": "Historical source catalog price; current merchant price and stock are not verified",
+    "personalization": {
+      "active_model_version": "item_cf-7f011e780482",
+      "model_type": "item_cf",
+      "trained_at": "2026-10-05T18:06:07.685246+00:00",
+      "status": "ready"
+    }
+  },
+  "inference": {
+    "actual_model": "item_cf-7f011e780482",
+    "distinct_histories_change_predictions": true,
+    "observed_items_excluded": true,
+    "first_prediction": [
+      "B0057MMSWY",
+      "B001ABYS4C",
+      "B00005V50B",
+      "B007IIHZ6O",
+      "B004BDTSN2",
+      "B00AG1E5YK",
+      "B000XNNH7C",
+      "B00R7HANB0",
+      "B000BIGSTS",
+      "B0057MMUG8"
+    ],
+    "second_prediction": [
+      "B0001Y74H2",
+      "B0001Y74TA",
+      "B000ABBJSG",
+      "B00176X9TU",
+      "B00502NNE8",
+      "B005OS2CHC",
+      "B006UI00YM",
+      "B007Z90QPS",
+      "B00CQEAZIU",
+      "B00RANRHCO"
+    ]
+  },
+  "qa_accounts_removed_before_training": 2,
+  "worker": {
+    "job_id": "3e34c742-8a70-41ca-9842-edf3cff8aca7",
+    "status": "completed",
+    "runs": [
+      "item_cf-216c18fc5ce0"
+    ],
+    "seconds": 118.65,
+    "active_model_preserved": true
+  }
+}

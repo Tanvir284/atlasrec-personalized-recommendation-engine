@@ -1,0 +1,114 @@
+{
+  "status": "passed",
+  "python": {
+    "passed": 41,
+    "seconds": 132.75,
+    "exit_code": 0
+  },
+  "ruff": {
+    "exit_code": 0
+  },
+  "eslint": {
+    "exit_code": 0
+  },
+  "production_build": {
+    "web_exit_code": 0,
+    "api_worker_exit_code": 0
+  },
+  "browser": {
+    "desktop_and_phone_real_catalog_checks": 6,
+    "final_desktop_and_phone_homepage_checks": 2,
+    "failures": 0,
+    "unknown_category_hidden_from_research_navigation": true,
+    "automated_qa_accounts_removed": 2
+  },
+  "live_serving": {
+    "status": "passed",
+    "active_model": "item_cf-7f011e780482",
+    "different_histories_change_predictions": true,
+    "observed_items_excluded": true,
+    "real_worker_job_completed": true
+  },
+  "dataset": {
+    "profile": "research",
+    "synthetic": false,
+    "category": "Luxury_Beauty",
+    "source_dataset": "Amazon Reviews 2018",
+    "source_format": "amazon2018_ratings",
+    "source": "https://cseweb.ucsd.edu/~jmcauley/datasets/amazon_v2/",
+    "terms": "https://cseweb.ucsd.edu/~jmcauley/datasets/amazon_v2/",
+    "retrieved_at": "2026-10-05T17:46:43.812830+00:00",
+    "imported_at": "2026-10-05T17:51:21.656797+00:00",
+    "parser": "amazon-real-v3",
+    "files": {
+      "data\\research\\luxury-beauty-2018\\Luxury_Beauty.csv": "5e1ab08a0147412d6a15ab4b8259df7fbc1fe09c747ba5c46486081ee4d68d24",
+      "data\\research\\luxury-beauty-2018\\meta_Luxury_Beauty.json.gz": "4891082bbbacecd5d708cbd73e653c0f95bed270c6b944613abcc8e100b3a7bc"
+    },
+    "sampling": {
+      "method": "training-history cohort then complete hashed-user histories",
+      "fraction": 1,
+      "seed": 42,
+      "scan_cap": 600000,
+      "complete_histories": true,
+      "min_train_user_positives": 3,
+      "source_accepted_rows": 537656,
+      "source_users": 416174,
+      "selection_bias": "Established reviewers with sufficient positive training history; not all shoppers"
+    },
+    "row_count": 52249,
+    "scanned": 574628,
+    "rejected": 0,
+    "duplicates": 36972,
+    "missing_metadata": 6,
+    "meta_rejected": 0,
+    "product_count": 6692,
+    "user_count": 9947,
+    "products_with_source_photo": 5886,
+    "price_semantics": "USD at source crawl time; archived price, not a current offer",
+    "interaction_semantics": "Real historical reviewer ratings; not purchases, exposures or app customer accounts",
+    "timestamp_range": [
+      1088467200.0,
+      1537747200.0
+    ],
+    "temporal_boundaries": [
+      1483574400.0,
+      1505952000.0
+    ],
+    "boundary_population": "Full accepted source before training-only user cohort selection",
+    "dataset_id": "079976012a366152",
+    "boundaries": [
+      1483574400.0,
+      1505952000.0
+    ],
+    "split_id": "3561f87e569224e8"
+  },
+  "training": [
+    {
+      "version": "popularity-419f319e6e0f",
+      "model": "popularity",
+      "status": "completed",
+      "test_queries": 655,
+      "ndcg10": 0.0018203565631392368,
+      "recall10": 0.0030534351145038168,
+      "validation_ndcg10": 0.0017234126806828487
+    },
+    {
+      "version": "item_cf-7f011e780482",
+      "model": "item_cf",
+      "status": "completed",
+      "test_queries": 655,
+      "ndcg10": 0.025175779216076243,
+      "recall10": 0.03767357324609233,
+      "validation_ndcg10": 0.04388777825926308
+    },
+    {
+      "version": "two_tower-60647437fcf3",
+      "model": "two_tower",
+      "status": "completed",
+      "test_queries": 655,
+      "ndcg10": 0.013602471468803352,
+      "recall10": 0.02468193384223918,
+      "validation_ndcg10": 0.020409504961541168
+    }
+  ]
+}

@@ -1,0 +1,178 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\MD Tanvir Islam\\.codex\\worktrees\\ffdb\\MD Tanvir Islam\\Desktop\\AtlasRec — Personalized Product Recommendation Platform\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "tests/browser/real-catalog.spec.js",
+      "--grep",
+      "real catalog provenance"
+    ],
+    "configFile": "C:\\Users\\MD Tanvir Islam\\.codex\\worktrees\\ffdb\\MD Tanvir Islam\\Desktop\\AtlasRec — Personalized Product Recommendation Platform\\playwright.config.js",
+    "rootDir": "C:/Users/MD Tanvir Islam/.codex/worktrees/ffdb/MD Tanvir Islam/Desktop/AtlasRec — Personalized Product Recommendation Platform/tests/browser",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/MD Tanvir Islam/.codex/worktrees/ffdb/MD Tanvir Islam/Desktop/AtlasRec — Personalized Product Recommendation Platform/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "desktop",
+        "name": "desktop",
+        "testDir": "C:/Users/MD Tanvir Islam/.codex/worktrees/ffdb/MD Tanvir Islam/Desktop/AtlasRec — Personalized Product Recommendation Platform/tests/browser",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "C:/Users/MD Tanvir Islam/.codex/worktrees/ffdb/MD Tanvir Islam/Desktop/AtlasRec — Personalized Product Recommendation Platform/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "phone",
+        "name": "phone",
+        "testDir": "C:/Users/MD Tanvir Islam/.codex/worktrees/ffdb/MD Tanvir Islam/Desktop/AtlasRec — Personalized Product Recommendation Platform/tests/browser",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "docs/evidence/retail-home-browser.json"
+        }
+      ],
+      [
+        "html",
+        {
+          "open": "never"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "real-catalog.spec.js",
+      "file": "real-catalog.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "real catalog provenance, trained predictions and actual photographs",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 12041,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T03:36:00.916Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ef4d946c1fea0a674915-2fe3e55fd915ee96c18d",
+          "file": "real-catalog.spec.js",
+          "line": 12,
+          "column": 1
+        },
+        {
+          "title": "real catalog provenance, trained predictions and actual photographs",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "phone",
+              "projectName": "phone",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4246,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T03:36:17.136Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ef4d946c1fea0a674915-fa0bd8a0551a3f52c4ff",
+          "file": "real-catalog.spec.js",
+          "line": 12,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-06T03:35:58.147Z",
+    "duration": 25583.626,
+    "expected": 2,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

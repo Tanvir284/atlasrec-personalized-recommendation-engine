@@ -1,0 +1,115 @@
+{
+  "captured_at": "2026-10-05T09:13:12.075Z",
+  "results": [
+    {
+      "device": "desktop",
+      "page": "home",
+      "viewport": 1440,
+      "width": 1440,
+      "documentWidth": 1440,
+      "brokenImages": [],
+      "errors": []
+    },
+    {
+      "device": "desktop",
+      "page": "catalog",
+      "viewport": 1440,
+      "width": 1440,
+      "documentWidth": 1440,
+      "brokenImages": [],
+      "errors": []
+    },
+    {
+      "device": "desktop",
+      "page": "product",
+      "viewport": 1440,
+      "width": 1440,
+      "documentWidth": 1440,
+      "brokenImages": [],
+      "errors": []
+    },
+    {
+      "device": "desktop",
+      "page": "login",
+      "viewport": 1440,
+      "width": 1440,
+      "documentWidth": 1440,
+      "brokenImages": [],
+      "errors": []
+    },
+    {
+      "device": "phone",
+      "page": "home",
+      "viewport": 390,
+      "width": 390,
+      "documentWidth": 390,
+      "brokenImages": [],
+      "errors": []
+    },
+    {
+      "device": "phone",
+      "page": "catalog",
+      "viewport": 390,
+      "width": 390,
+      "documentWidth": 390,
+      "brokenImages": [],
+      "errors": []
+    },
+    {
+      "device": "phone",
+      "page": "product",
+      "viewport": 390,
+      "width": 390,
+      "documentWidth": 390,
+      "brokenImages": [],
+      "errors": []
+    },
+    {
+      "device": "phone",
+      "page": "login",
+      "viewport": 390,
+      "width": 390,
+      "documentWidth": 390,
+      "brokenImages": [],
+      "errors": []
+    },
+    {
+      "device": "small-phone",
+      "page": "home",
+      "viewport": 320,
+      "width": 320,
+      "documentWidth": 320,
+      "brokenImages": [],
+      "errors": [
+        "Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings."
+      ]
+    },
+    {
+      "device": "small-phone",
+      "page": "catalog",
+      "viewport": 320,
+      "width": 320,
+      "documentWidth": 320,
+      "brokenImages": [],
+      "errors": []
+    },
+    {
+      "device": "small-phone",
+      "page": "product",
+      "viewport": 320,
+      "width": 320,
+      "documentWidth": 320,
+      "brokenImages": [],
+      "errors": []
+    },
+    {
+      "device": "small-phone",
+      "page": "login",
+      "viewport": 320,
+      "width": 320,
+      "documentWidth": 320,
+      "brokenImages": [],
+      "errors": []
+    }
+  ]
+}

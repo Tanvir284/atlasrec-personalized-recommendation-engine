@@ -1,0 +1,12 @@
+{
+  "dataset_id": "079976012a366152",
+  "products": 6692,
+  "historical_reviews": 52249,
+  "historical_reviewers": 9947,
+  "active_model": "item_cf-7f011e780482",
+  "model": "item_cf",
+  "selection": "Best validation warm NDCG among completed personalized models; test metrics not used",
+  "validation_ndcg10": 0.04388777825926308,
+  "test_ndcg10": 0.025175779216076243,
+  "installed_at": "2026-10-05T18:08:04.4583929Z"
+}

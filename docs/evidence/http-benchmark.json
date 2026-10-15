@@ -1,0 +1,13 @@
+{
+  "workload": "HTTP API, isolated SQLite browser fixture; not Docker/PostgreSQL benchmark",
+  "requests": 200,
+  "warmup": 20,
+  "concurrency": 10,
+  "catalog": 200,
+  "cache": "Redis unavailable, fallback observed",
+  "errors": 0,
+  "p50_ms": 1009.8425999995015,
+  "p95_ms": 2502.7967149994174,
+  "throughput_per_second": 6.753078541953501,
+  "platform": "Windows-11-10.0.26300-SP0"
+}

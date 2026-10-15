@@ -1,0 +1,110 @@
+[
+  {
+    "model": "popularity",
+    "version": "popularity-4d59e9ff08f6",
+    "workload": "in-process model inference; excludes API/DB/Redis/network",
+    "requests": 200,
+    "concurrency": 10,
+    "warmup": 20,
+    "catalog": 200,
+    "cache": "none",
+    "errors": 0,
+    "p50_ms": 0.17605000039111474,
+    "p95_ms": 4.828244999998773,
+    "throughput_per_second": 2864.4143776439228,
+    "hardware": {
+      "platform": "Windows-11-10.0.26300-SP0",
+      "threads": 8
+    }
+  },
+  {
+    "model": "item_cf",
+    "version": "item_cf-ead0004fcb26",
+    "workload": "in-process model inference; excludes API/DB/Redis/network",
+    "requests": 200,
+    "concurrency": 10,
+    "warmup": 20,
+    "catalog": 200,
+    "cache": "none",
+    "errors": 0,
+    "p50_ms": 6.9040500002302,
+    "p95_ms": 35.239990000036414,
+    "throughput_per_second": 692.8055263700135,
+    "hardware": {
+      "platform": "Windows-11-10.0.26300-SP0",
+      "threads": 8
+    }
+  },
+  {
+    "model": "bpr",
+    "version": "bpr-481bdcd1fe10",
+    "workload": "in-process model inference; excludes API/DB/Redis/network",
+    "requests": 200,
+    "concurrency": 10,
+    "warmup": 20,
+    "catalog": 200,
+    "cache": "none",
+    "errors": 0,
+    "p50_ms": 4.369499999938853,
+    "p95_ms": 13.738385000124252,
+    "throughput_per_second": 1137.3154918849575,
+    "hardware": {
+      "platform": "Windows-11-10.0.26300-SP0",
+      "threads": 8
+    }
+  },
+  {
+    "model": "two_tower",
+    "version": "two_tower-24e5ec9059c9",
+    "workload": "in-process model inference; excludes API/DB/Redis/network",
+    "requests": 200,
+    "concurrency": 10,
+    "warmup": 20,
+    "catalog": 200,
+    "cache": "none",
+    "errors": 0,
+    "p50_ms": 18.822949999957928,
+    "p95_ms": 30.552084999862924,
+    "throughput_per_second": 468.9285592022347,
+    "hardware": {
+      "platform": "Windows-11-10.0.26300-SP0",
+      "threads": 8
+    }
+  },
+  {
+    "model": "two_tower_id",
+    "version": "two_tower_id-94c8d424f748",
+    "workload": "in-process model inference; excludes API/DB/Redis/network",
+    "requests": 200,
+    "concurrency": 10,
+    "warmup": 20,
+    "catalog": 200,
+    "cache": "none",
+    "errors": 0,
+    "p50_ms": 18.351600000187318,
+    "p95_ms": 32.776899999453214,
+    "throughput_per_second": 467.97254405142,
+    "hardware": {
+      "platform": "Windows-11-10.0.26300-SP0",
+      "threads": 8
+    }
+  },
+  {
+    "model": "ranker",
+    "version": "ranker-e41f7d6979f0",
+    "workload": "in-process model inference; excludes API/DB/Redis/network",
+    "requests": 200,
+    "concurrency": 10,
+    "warmup": 20,
+    "catalog": 200,
+    "cache": "none",
+    "errors": 0,
+    "p50_ms": 65.65579999960391,
+    "p95_ms": 148.07688500027325,
+    "throughput_per_second": 129.74918509400234,
+    "hardware": {
+      "platform": "Windows-11-10.0.26300-SP0",
+      "threads": 8
+    }
+  }
+]

@@ -1,0 +1,349 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\MD Tanvir Islam\\Desktop\\AtlasRec — Personalized Product Recommendation Platform\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "tests/browser/real-catalog.spec.js",
+      "tests/browser/audit.spec.js",
+      "--project=desktop"
+    ],
+    "configFile": "C:\\Users\\MD Tanvir Islam\\Desktop\\AtlasRec — Personalized Product Recommendation Platform\\playwright.config.js",
+    "rootDir": "C:/Users/MD Tanvir Islam/Desktop/AtlasRec — Personalized Product Recommendation Platform/tests/browser",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/MD Tanvir Islam/Desktop/AtlasRec — Personalized Product Recommendation Platform/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "desktop",
+        "name": "desktop",
+        "testDir": "C:/Users/MD Tanvir Islam/Desktop/AtlasRec — Personalized Product Recommendation Platform/tests/browser",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "C:/Users/MD Tanvir Islam/Desktop/AtlasRec — Personalized Product Recommendation Platform/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "phone",
+        "name": "phone",
+        "testDir": "C:/Users/MD Tanvir Islam/Desktop/AtlasRec — Personalized Product Recommendation Platform/tests/browser",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "docs/evidence/retail-browser.json"
+        }
+      ],
+      [
+        "html",
+        {
+          "open": "never"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "audit.spec.js",
+      "file": "audit.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "tracked title visits and saves survive lost or rotated CSRF cookies",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 32940,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-15T06:56:13.438Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "cb3620ddbaaaeb17db70-bbbf4d331e6ddd56c562",
+          "file": "audit.spec.js",
+          "line": 3,
+          "column": 1
+        },
+        {
+          "title": "a failed visible impression is retried and recorded",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8925,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-15T06:56:47.396Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "cb3620ddbaaaeb17db70-3a334939797de0743992",
+          "file": "audit.spec.js",
+          "line": 75,
+          "column": 1
+        },
+        {
+          "title": "taste studio intent lens, match DNA x-ray, counterfactual sandbox, side-by-side compare, and ecosystem bundle work",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 120305,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 120000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 120000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 120000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "C:\\Users\\MD Tanvir Islam\\Desktop\\AtlasRec — Personalized Product Recommendation Platform\\tests\\browser\\audit.spec.js",
+                        "column": 10,
+                        "line": 120
+                      },
+                      "message": "Error: page.waitForResponse: Test timeout of 120000ms exceeded.\n\n  118 |\n  119 |   await Promise.all([\n> 120 |     page.waitForResponse(\n      |          ^\n  121 |       r =>\n  122 |         r.url().endsWith(\"/events\") &&\n  123 |         r.request().method() === \"POST\" &&\n    at C:\\Users\\MD Tanvir Islam\\Desktop\\AtlasRec — Personalized Product Recommendation Platform\\tests\\browser\\audit.spec.js:120:10"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-15T06:56:56.446Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\MD Tanvir Islam\\Desktop\\AtlasRec — Personalized Product Recommendation Platform\\test-results\\audit-taste-studio-intent--5059e-e-and-ecosystem-bundle-work-desktop\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\MD Tanvir Islam\\Desktop\\AtlasRec — Personalized Product Recommendation Platform\\test-results\\audit-taste-studio-intent--5059e-e-and-ecosystem-bundle-work-desktop\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "cb3620ddbaaaeb17db70-2d2efa2db72fb34b790d",
+          "file": "audit.spec.js",
+          "line": 107,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "real-catalog.spec.js",
+      "file": "real-catalog.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "real catalog provenance, trained predictions and actual photographs",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8804,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-15T06:58:58.450Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ef4d946c1fea0a674915-2fe3e55fd915ee96c18d",
+          "file": "real-catalog.spec.js",
+          "line": 14,
+          "column": 1
+        },
+        {
+          "title": "real search, category and source product details work",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9549,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-15T06:59:07.760Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ef4d946c1fea0a674915-795b6d4731296f5f4b3a",
+          "file": "real-catalog.spec.js",
+          "line": 52,
+          "column": 1
+        },
+        {
+          "title": "real account feedback persists and updates served recommendations",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 17404,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-15T06:59:17.368Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ef4d946c1fea0a674915-4a090f459cda003ce8f2",
+          "file": "real-catalog.spec.js",
+          "line": 99,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-15T06:56:12.004Z",
+    "duration": 203371.09300000002,
+    "expected": 5,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

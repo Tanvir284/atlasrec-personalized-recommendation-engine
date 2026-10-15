@@ -1,0 +1,9 @@
+{
+  "persisted_shopper": true,
+  "concurrent_event_idempotency": true,
+  "queued_job_completed": true,
+  "job": "631fb967-d475-4ebe-bc8c-661d72aac836",
+  "candidate": "item_cf-a4db1f3153fd",
+  "promotion_rollback": true,
+  "profile": "demo"
+}

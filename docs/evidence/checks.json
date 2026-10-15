@@ -1,0 +1,86 @@
+{
+  "commands": [
+    {
+      "command": ".venv/Scripts/ruff.exe check packages services scripts tests",
+      "exit_code": 0
+    },
+    {
+      "command": "npm run lint",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m pytest -q tests/test_api.py tests/test_feedback.py tests/test_settings.py",
+      "exit_code": 0,
+      "passed": 6,
+      "seconds": 121.55,
+      "scope": "latest API/feedback/production settings regression; native isolated database"
+    },
+    {
+      "command": "python scripts/manage.py demo",
+      "exit_code": 0,
+      "scope": "final Docker build, readiness, migrations and bootstrap reuse",
+      "active_version": "popularity-cde25f148369"
+    },
+    {
+      "command": "EXPECT_QUEUE=1 node node_modules/@playwright/test/cli.js test",
+      "exit_code": 0,
+      "passed": 2,
+      "seconds": 62.21477,
+      "scope": "final real Compose desktop and phone journeys"
+    },
+    {
+      "command": "python scripts/container_check.py",
+      "exit_code": 0,
+      "scope": "real PostgreSQL state, concurrent event IDs, queued CF, promotion/rollback"
+    },
+    {
+      "command": "python /tmp/atlasrec_queue_recovery_check.py",
+      "exit_code": 0,
+      "scope": "real failed worker job and authenticated retry"
+    },
+    {
+      "command": "python scripts/http_benchmark.py --base-url http://127.0.0.1:3000",
+      "exit_code": 0,
+      "scope": "200 requests, 10 clients; p95 target missed"
+    },
+    {
+      "command": "python scripts/verify_http_benchmark.py REPORT --output WRITABLE_REPORT",
+      "exit_code": 0,
+      "scope": "exact request IDs; 200 persisted rows and 200 Redis cache hits"
+    },
+    {
+      "command": "python scripts/manage.py doctor",
+      "exit_code": 0,
+      "scope": "run from the exact Desktop project; Docker ready, Node/uv/Python tools found"
+    }
+  ],
+  "prior_python_checks": {
+    "full_suite_passed": 17,
+    "full_suite_seconds": 129.64,
+    "dedicated_cold_id_mask_passed": 1,
+    "dedicated_cold_id_mask_seconds": 65.07
+  },
+  "visual_inspection": {
+    "passed": true,
+    "images": [
+      "home-desktop.png",
+      "home-phone.png",
+      "admin-desktop.png",
+      "admin-phone.png",
+      "experiments-desktop.png",
+      "experiments-phone.png"
+    ],
+    "notes": "Actual app data; final desktop metric bars visible after entrance animation disabled. Phone table uses its intentional internal horizontal scroll."
+  },
+  "unexecuted": [
+    "GitHub CI",
+    "external deployment",
+    "backup/restore rehearsal",
+    "hard-kill exactly-once recovery"
+  ],
+  "desktop_sync": {
+    "source_files": 132,
+    "sha256_comparison": "all copied source files matched",
+    "local_demo_env": "generated from .env.example only when absent"
+  }
+}

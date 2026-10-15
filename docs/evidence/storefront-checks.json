@@ -1,0 +1,97 @@
+{
+  "status": "passed",
+  "checked_at": "2026-10-05T16:06:45.448958+06:00",
+  "eslint": {
+    "command": "npm run lint",
+    "exit_code": 0
+  },
+  "ruff": {
+    "command": "ruff check packages services scripts tests",
+    "exit_code": 0
+  },
+  "python": {
+    "command": "pytest tests/test_api.py tests/test_feedback.py -q",
+    "passed": 7,
+    "duration_seconds": 110.74,
+    "exit_code": 0
+  },
+  "production": {
+    "commands": [
+      "python scripts/manage.py demo",
+      "docker compose -p atlasrec build web",
+      "docker compose -p atlasrec up -d --no-build --wait --wait-timeout 300 web"
+    ],
+    "exit_code": 0,
+    "active_model_preserved": "popularity-cde25f148369"
+  },
+  "browser": {
+    "command": "STOREFRONT=1 EXPECT_QUEUE=1 playwright test",
+    "exit_code": 0,
+    "stats": {
+      "startTime": "2026-10-05T09:59:51.869Z",
+      "duration": 179858.219,
+      "expected": 18,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    }
+  },
+  "visual": {
+    "command": "node scripts/capture-storefront.js",
+    "exit_code": 0,
+    "captures": 12,
+    "widths": [
+      1440,
+      390,
+      320
+    ],
+    "overflow": false,
+    "broken_images": 0,
+    "runtime_errors": 0
+  },
+  "artwork_count": 20,
+  "source_sha256": {
+    "apps/web/components/ui.jsx": "7e8b9d1495df06ebbd26f3086f8350aee86ba857905a99cb75f5a5861f9e4c96",
+    "apps/web/components/shop.jsx": "36c54618287d6710def0b398b913c386af79fed7d70e599c248903d15dddb539",
+    "apps/web/lib/products.js": "6c60c05cd6a2fa4b2c2eb3fffd60c1c3e7ee9bad4cbff1be6936fe484508cd39",
+    "apps/web/app/globals.css": "2cbeccceb7745a34babfe092142f0a8c3e628691054780e778e3181b28a6f391",
+    "apps/web/app/layout.jsx": "6dd414855c7bcdfb2be8211bfbd489d62fb4da5adc33ddfd45fcb7635da98a39",
+    "services/api/atlasrec_api/main.py": "e345116f3e967c4d928bb41b5db0b5649268d2329ec5fae512e33a47cb9f6e0f",
+    "scripts/generate_store_assets.py": "1e11ceb0b039983a3c8ed3242f7abb6948d2bfbe7616b661b7c60e82c4b88708",
+    "scripts/capture-storefront.js": "eacae13acff5906f2f23ae34e35689eb72e2ad25b6349793e85f270076e5d0a4",
+    "tests/test_feedback.py": "cc71f165280fec23a0f23df62d0984fc831f7be007b587a083596b53b5e05e6e",
+    "tests/test_api.py": "83cee75bf0056540dbe95741df606f89ad39cf85601237f3c98ebd555b70a24e",
+    "tests/browser/storefront.spec.js": "ed1a32d3a123eb731b3be44282509678807c666653833dc0968ffca015218aa3",
+    "playwright.config.js": "25ec6e2d0fd2da60375f5f1650bca98f13955e3d1fb5a83f317c247448a6aeb7",
+    "apps/web/app/page.jsx": "e08af6d4c04020e30c7aceafd81bddd814cab292b44c5c03dbb5d9759e382027",
+    "apps/web/lib/api.js": "336ed6463379fe45ba4b22d070d46c124daecac31a0189ade31498495650d27b",
+    "apps/web/app/api/[...path]/route.js": "eaa477ada28701bd9ff3bc0a679b1a1909621478b8c1c7f6015f6e1168c63ee1",
+    "apps/web/public/products/store/backpack.svg": "124a4ed18e28f4d2095966a6001237118d4b95d779de64b54ffabd8d97a7f3f5",
+    "apps/web/public/products/store/blanket.svg": "426047ea5bfd53be5f11fd2373a4c40aa83d6ae6bea29333f069128284736233",
+    "apps/web/public/products/store/bottle.svg": "425f6394f4582e26a3307710ae45928a3ea9351d759c0dbaf73dfaf4e1b4fffa",
+    "apps/web/public/products/store/clock.svg": "f00057f47da136022fa47c18be8976acf18cf2af3d6ba195519feb6575df49ba",
+    "apps/web/public/products/store/diffuser.svg": "bdccd29ebc9327262c94a078f32e43f03cd89572246e5d8b7c27675f3500dd87",
+    "apps/web/public/products/store/earbuds.svg": "96e68aa2db5e061bd4584e1b58dc1d5777602a445fd112124cb9abb901341f71",
+    "apps/web/public/products/store/fitness-band.svg": "049f8dfb06ae01cef8fad0aa30017a799542f2b9f1cb4542402afd9bd3e5f01e",
+    "apps/web/public/products/store/headphones.svg": "a04ed69a55bbf236c547beba65682374a19209e1c15960a42926717d8ca207b6",
+    "apps/web/public/products/store/kettle.svg": "b421afc4753ee6229ac1d6b85b51941a1b7c1a9991fbcad3605550c9b2f870f4",
+    "apps/web/public/products/store/keyboard.svg": "7df71813af819018d26a2187d65123895a2a263d3ab2c7262cc1908a98ce69ad",
+    "apps/web/public/products/store/lamp.svg": "a7ea1864ac3216c593915cd5f75ff50e67cd0a70d2b81420d172a3c8e5a815d8",
+    "apps/web/public/products/store/lantern.svg": "d19e65e6b5a8e0093cab737f6b389963b2cc8053153e11eea52ce092d2b5b8f7",
+    "apps/web/public/products/store/mug.svg": "a2d6bcc8b361238eacf7bb51c5b646629576a6434136170674933a522321e16b",
+    "apps/web/public/products/store/organizer.svg": "e0dc2e9246b6b49c5273a2df0a9921f6710be813fb6a05e25f38db656729a39a",
+    "apps/web/public/products/store/record-player.svg": "bbcd2e16bc08d39cc95e768aab2d758bfcf932ac9c01fd93049645229fee0418",
+    "apps/web/public/products/store/shelf.svg": "572d863eb89ec084bc4d5e8c5ab1faeafc402297ac70752e0ebb9f42112ebb38",
+    "apps/web/public/products/store/sleep-mask.svg": "4296baab7d58d0b2d88217e26a0bce7889d7d52e6c11c06cbb98dea1711f8ad7",
+    "apps/web/public/products/store/speaker.svg": "b334e73c2254029449e44b04818cf580372cc968296a75cd6770c218a1c7625a",
+    "apps/web/public/products/store/throw.svg": "283131219adab7a92ea06b5ef8c67f6be60cdf27012d5fc0532f00ac6398bd7a",
+    "apps/web/public/products/store/yoga-mat.svg": "e6d258833ac4e88954194662094d80f8180446764757ec96e8dcc4565e739c0b"
+  },
+  "desktop_sync": {
+    "verified": true,
+    "files": 190,
+    "destination": "C:\\Users\\MD Tanvir Islam\\Desktop\\AtlasRec — Personalized Product Recommendation Platform",
+    "checked_at": "2026-10-05T10:10:31.9216716Z",
+    "algorithm": "SHA256"
+  }
+}

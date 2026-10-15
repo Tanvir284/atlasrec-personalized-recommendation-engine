@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "user_id": "676d4424-2c79-4516-80ec-194d84dbea88",
+  "concurrent_save_statuses": [
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200
+  ],
+  "favorites": 3,
+  "favorite_events": 3,
+  "favorite_revision": 3,
+  "revised_ratings_persisted": 3,
+  "view_invalidates_cache": true,
+  "csrf_cookie_recovery": true,
+  "cache_hit": true,
+  "served_ids_match_record": true,
+  "exposure_index_predicate": "((kind)::text = ANY ((ARRAY['view'::character varying, 'impression'::character varying, 'click'::character varying])::text[]))"
+}

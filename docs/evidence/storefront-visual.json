@@ -1,0 +1,140 @@
+{
+  "captured_at": "2026-10-15T06:07:28.622Z",
+  "results": [
+    {
+      "device": "desktop",
+      "page": "home",
+      "viewport": 1440,
+      "width": 1440,
+      "documentWidth": 1440,
+      "brokenImages": [],
+      "errors": []
+    },
+    {
+      "device": "desktop",
+      "page": "catalog",
+      "viewport": 1440,
+      "width": 1440,
+      "documentWidth": 1440,
+      "brokenImages": [],
+      "errors": []
+    },
+    {
+      "device": "desktop",
+      "page": "for-you",
+      "viewport": 1440,
+      "width": 1440,
+      "documentWidth": 1440,
+      "brokenImages": [],
+      "errors": []
+    },
+    {
+      "device": "desktop",
+      "page": "product",
+      "viewport": 1440,
+      "width": 1440,
+      "documentWidth": 1440,
+      "brokenImages": [],
+      "errors": []
+    },
+    {
+      "device": "desktop",
+      "page": "login",
+      "viewport": 1440,
+      "width": 1440,
+      "documentWidth": 1440,
+      "brokenImages": [],
+      "errors": []
+    },
+    {
+      "device": "phone",
+      "page": "home",
+      "viewport": 390,
+      "width": 390,
+      "documentWidth": 390,
+      "brokenImages": [],
+      "errors": []
+    },
+    {
+      "device": "phone",
+      "page": "catalog",
+      "viewport": 390,
+      "width": 390,
+      "documentWidth": 390,
+      "brokenImages": [],
+      "errors": []
+    },
+    {
+      "device": "phone",
+      "page": "for-you",
+      "viewport": 390,
+      "width": 390,
+      "documentWidth": 390,
+      "brokenImages": [],
+      "errors": []
+    },
+    {
+      "device": "phone",
+      "page": "product",
+      "viewport": 390,
+      "width": 390,
+      "documentWidth": 390,
+      "brokenImages": [],
+      "errors": []
+    },
+    {
+      "device": "phone",
+      "page": "login",
+      "viewport": 390,
+      "width": 390,
+      "documentWidth": 390,
+      "brokenImages": [],
+      "errors": []
+    },
+    {
+      "device": "small-phone",
+      "page": "home",
+      "viewport": 320,
+      "width": 320,
+      "documentWidth": 320,
+      "brokenImages": [],
+      "errors": []
+    },
+    {
+      "device": "small-phone",
+      "page": "catalog",
+      "viewport": 320,
+      "width": 320,
+      "documentWidth": 320,
+      "brokenImages": [],
+      "errors": []
+    },
+    {
+      "device": "small-phone",
+      "page": "for-you",
+      "viewport": 320,
+      "width": 320,
+      "documentWidth": 320,
+      "brokenImages": [],
+      "errors": []
+    },
+    {
+      "device": "small-phone",
+      "page": "product",
+      "viewport": 320,
+      "width": 320,
+      "documentWidth": 320,
+      "brokenImages": [],
+      "errors": []
+    },
+    {
+      "device": "small-phone",
+      "page": "login",
+      "viewport": 320,
+      "width": 320,
+      "documentWidth": 320,
+      "brokenImages": [],
+      "errors": []
+    }
+  ]
+}

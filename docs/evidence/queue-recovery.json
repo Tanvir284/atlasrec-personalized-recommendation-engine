@@ -1,0 +1,10 @@
+{
+  "profile": "demo",
+  "job": "7d0c6922-a4a0-447c-a667-94bc8c4aa016",
+  "first_status": "failed",
+  "failure": "a cannot be empty unless no samples are taken",
+  "retry_status": "completed",
+  "attempts": 2,
+  "active_preserved": true,
+  "boundary": "real Redis/Celery worker, PostgreSQL, and authenticated HTTP retry"
+}

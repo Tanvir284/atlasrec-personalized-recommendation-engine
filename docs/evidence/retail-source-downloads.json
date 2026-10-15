@@ -1,0 +1,16 @@
+{
+  "retrieved_at": "2026-10-05T17:46:43.812830+00:00",
+  "dataset": "luxury-beauty-2018",
+  "files": {
+    "Luxury_Beauty.csv": {
+      "url": "http://jmcauley.ucsd.edu/data/amazon_v2/categoryFilesSmall/Luxury_Beauty.csv",
+      "bytes": 23983749,
+      "sha256": "5e1ab08a0147412d6a15ab4b8259df7fbc1fe09c747ba5c46486081ee4d68d24"
+    },
+    "meta_Luxury_Beauty.json.gz": {
+      "url": "http://jmcauley.ucsd.edu/data/amazon_v2/metaFiles2/meta_Luxury_Beauty.json.gz",
+      "bytes": 7608964,
+      "sha256": "4891082bbbacecd5d708cbd73e653c0f95bed270c6b944613abcc8e100b3a7bc"
+    }
+  }
+}

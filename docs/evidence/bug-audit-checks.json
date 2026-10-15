@@ -1,0 +1,91 @@
+{
+  "status": "passed",
+  "checked_at": "2026-10-05T13:37:37.438493+06:00",
+  "baseline_regressions_failed": 9,
+  "python": {
+    "command": "pytest -q --tb=short",
+    "exit_code": 0,
+    "passed": 29,
+    "duration_seconds": 74.49
+  },
+  "ruff": {
+    "command": "ruff check packages services scripts tests",
+    "exit_code": 0
+  },
+  "eslint": {
+    "command": "npm run lint",
+    "exit_code": 0
+  },
+  "production": {
+    "command": "python scripts/manage.py demo",
+    "exit_code": 0,
+    "migration": "0003",
+    "active_preserved": "popularity-cde25f148369"
+  },
+  "browser": {
+    "command": "AUDIT=1 EXPECT_QUEUE=1 playwright test",
+    "exit_code": 0,
+    "passed": 6,
+    "stats": {
+      "startTime": "2026-10-05T07:32:32.89Z",
+      "duration": 99834.018,
+      "expected": 6,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    }
+  },
+  "live_postgres_redis": {
+    "status": "passed",
+    "user_id": "676d4424-2c79-4516-80ec-194d84dbea88",
+    "concurrent_save_statuses": [
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200
+    ],
+    "favorites": 3,
+    "favorite_events": 3,
+    "favorite_revision": 3,
+    "revised_ratings_persisted": 3,
+    "view_invalidates_cache": true,
+    "csrf_cookie_recovery": true,
+    "cache_hit": true,
+    "served_ids_match_record": true,
+    "exposure_index_predicate": "((kind)::text = ANY ((ARRAY['view'::character varying, 'impression'::character varying, 'click'::character varying])::text[]))"
+  },
+  "code_sha256": {
+    "services/api/atlasrec_api/main.py": "a55e8345b1bc2e8ebaa193aec1f7c9642a74657768bdbcedab65b1b993d7e07c",
+    "services/api/atlasrec_api/security.py": "7d59ff22050eea450f330cf945b040ac4bf8561f29ec06d461958d59d5f0fabd",
+    "services/api/atlasrec_api/db.py": "5e5d9e53e01c69cc43d190659e4b0aa162544b6f9a1b14104aa47f82b9b24315",
+    "services/api/atlasrec_api/lifecycle.py": "ad8c56d5bce6784fe40db2db593ece4a1baf4d5d5e14107a728cfef6e7d048f5",
+    "services/api/migrations/versions/0003_repeat_feedback.py": "89c943ddb0afadb4ed63aec4e50cdac2d07b91de1601743918b660ebab064349",
+    "packages/ml/atlasrec_ml/features.py": "c19c15a8532809dc4114ad8e6db9bcafeed8f52399fb29a570729a544bb00623",
+    "packages/ml/atlasrec_ml/data.py": "b6c7cbe3dc64c050bd22a76fa7e3eabf73f437ca6e09851071421e2d66226484",
+    "apps/web/lib/api.js": "4a93e288528e2cc7c504458a09fd54e175c9ce1a3afb6d349fa69cb490e8645e",
+    "apps/web/components/ui.jsx": "e4c97d0e7e7c80f24f1da268f37ec02e7bd386a6e757adb2cb9855b0ce20408e",
+    "apps/web/components/shop.jsx": "1bbe4654416af0879e14c0b2ed597638bb4b883a53c44198948d138e71e511cc",
+    "apps/web/components/admin.jsx": "1dd9eb14a07bff856468b0309ce5ad18d6258a8889c60daa839318cf6dc4336d"
+  },
+  "desktop_sync": {
+    "checked_at": "2026-10-05T07:39:33.2012411Z",
+    "status": "verified",
+    "destination": "C:\\Users\\MD Tanvir Islam\\Desktop\\AtlasRec — Personalized Product Recommendation Platform",
+    "source_files": 140,
+    "algorithm": "SHA256"
+  },
+  "remaining": [
+    "HTTP p95 target missed",
+    "GitHub CI unexecuted",
+    "External deployment unexecuted",
+    "Backup/restore and hard-kill recovery unverified"
+  ],
+  "visual_review": [
+    "home-phone.png",
+    "experiments-desktop.png"
+  ]
+}

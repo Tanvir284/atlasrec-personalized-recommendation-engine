@@ -1,0 +1,566 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\MD Tanvir Islam\\.codex\\worktrees\\ffdb\\MD Tanvir Islam\\Desktop\\AtlasRec — Personalized Product Recommendation Platform\\node_modules\\@playwright\\test\\cli.js",
+      "test"
+    ],
+    "configFile": "C:\\Users\\MD Tanvir Islam\\.codex\\worktrees\\ffdb\\MD Tanvir Islam\\Desktop\\AtlasRec — Personalized Product Recommendation Platform\\playwright.config.js",
+    "rootDir": "C:/Users/MD Tanvir Islam/.codex/worktrees/ffdb/MD Tanvir Islam/Desktop/AtlasRec — Personalized Product Recommendation Platform/tests/browser",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/MD Tanvir Islam/.codex/worktrees/ffdb/MD Tanvir Islam/Desktop/AtlasRec — Personalized Product Recommendation Platform/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "desktop",
+        "name": "desktop",
+        "testDir": "C:/Users/MD Tanvir Islam/.codex/worktrees/ffdb/MD Tanvir Islam/Desktop/AtlasRec — Personalized Product Recommendation Platform/tests/browser",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 300000
+      },
+      {
+        "outputDir": "C:/Users/MD Tanvir Islam/.codex/worktrees/ffdb/MD Tanvir Islam/Desktop/AtlasRec — Personalized Product Recommendation Platform/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "phone",
+        "name": "phone",
+        "testDir": "C:/Users/MD Tanvir Islam/.codex/worktrees/ffdb/MD Tanvir Islam/Desktop/AtlasRec — Personalized Product Recommendation Platform/tests/browser",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 300000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "docs/evidence/storefront-browser.json"
+        }
+      ],
+      [
+        "html",
+        {
+          "open": "never"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "audit.spec.js",
+      "file": "audit.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "tracked title visits and saves survive lost or rotated CSRF cookies",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 300000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 13965,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-05T09:09:47.337Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "cb3620ddbaaaeb17db70-bbbf4d331e6ddd56c562",
+          "file": "audit.spec.js",
+          "line": 3,
+          "column": 1
+        },
+        {
+          "title": "a failed visible impression is retried and recorded",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 300000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5410,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-05T09:10:03.334Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "cb3620ddbaaaeb17db70-3a334939797de0743992",
+          "file": "audit.spec.js",
+          "line": 49,
+          "column": 1
+        },
+        {
+          "title": "tracked title visits and saves survive lost or rotated CSRF cookies",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 300000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "phone",
+              "projectName": "phone",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9093,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-05T09:11:26.478Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "cb3620ddbaaaeb17db70-b373eeae310b157998df",
+          "file": "audit.spec.js",
+          "line": 3,
+          "column": 1
+        },
+        {
+          "title": "a failed visible impression is retried and recorded",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 300000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "phone",
+              "projectName": "phone",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2603,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-05T09:11:36.636Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "cb3620ddbaaaeb17db70-c170a1c991e0ab047324",
+          "file": "audit.spec.js",
+          "line": 49,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "journey.spec.js",
+      "file": "journey.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "guest to persisted shopper, then protected admin",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 300000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 53167,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-05T09:10:09.019Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "33c61cd1f2a4400db853-293dacd3e7ae474525e6",
+          "file": "journey.spec.js",
+          "line": 3,
+          "column": 1
+        },
+        {
+          "title": "guest to persisted shopper, then protected admin",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 300000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "phone",
+              "projectName": "phone",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 45126,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('tbody tr').first()\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('tbody tr').first() with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for locator('tbody tr').first()\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('tbody tr').first()\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('tbody tr').first() with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for locator('tbody tr').first()\u001b[22m\n\n    at C:\\Users\\MD Tanvir Islam\\.codex\\worktrees\\ffdb\\MD Tanvir Islam\\Desktop\\AtlasRec — Personalized Product Recommendation Platform\\tests\\browser\\journey.spec.js:64:49",
+                    "location": {
+                      "file": "C:\\Users\\MD Tanvir Islam\\.codex\\worktrees\\ffdb\\MD Tanvir Islam\\Desktop\\AtlasRec — Personalized Product Recommendation Platform\\tests\\browser\\journey.spec.js",
+                      "column": 49,
+                      "line": 64
+                    },
+                    "snippet": "  62 |  await page.goto(\"/admin/experiments\");\n  63 |  await expect(page.getByRole(\"heading\",{name:\"Experiment notebook\",exact:true})).toBeVisible();\n> 64 |  await expect(page.locator(\"tbody tr\").first()).toBeVisible();\n     |                                                 ^\n  65 |  await waitForChart(page);\n  66 |  await page.screenshot({path:\"docs/evidence/experiments-\"+testInfo.project.name+\".png\",fullPage:true});\n  67 |  await page.goto(\"/admin/monitoring\");"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\MD Tanvir Islam\\.codex\\worktrees\\ffdb\\MD Tanvir Islam\\Desktop\\AtlasRec — Personalized Product Recommendation Platform\\tests\\browser\\journey.spec.js",
+                        "column": 49,
+                        "line": 64
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('tbody tr').first()\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('tbody tr').first() with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for locator('tbody tr').first()\u001b[22m\n\n\n  62 |  await page.goto(\"/admin/experiments\");\n  63 |  await expect(page.getByRole(\"heading\",{name:\"Experiment notebook\",exact:true})).toBeVisible();\n> 64 |  await expect(page.locator(\"tbody tr\").first()).toBeVisible();\n     |                                                 ^\n  65 |  await waitForChart(page);\n  66 |  await page.screenshot({path:\"docs/evidence/experiments-\"+testInfo.project.name+\".png\",fullPage:true});\n  67 |  await page.goto(\"/admin/monitoring\");\n    at C:\\Users\\MD Tanvir Islam\\.codex\\worktrees\\ffdb\\MD Tanvir Islam\\Desktop\\AtlasRec — Personalized Product Recommendation Platform\\tests\\browser\\journey.spec.js:64:49"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-05T09:11:39.329Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\MD Tanvir Islam\\.codex\\worktrees\\ffdb\\MD Tanvir Islam\\Desktop\\AtlasRec — Personalized Product Recommendation Platform\\test-results\\journey-guest-to-persisted-shopper-then-protected-admin-phone\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\MD Tanvir Islam\\.codex\\worktrees\\ffdb\\MD Tanvir Islam\\Desktop\\AtlasRec — Personalized Product Recommendation Platform\\test-results\\journey-guest-to-persisted-shopper-then-protected-admin-phone\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\MD Tanvir Islam\\.codex\\worktrees\\ffdb\\MD Tanvir Islam\\Desktop\\AtlasRec — Personalized Product Recommendation Platform\\tests\\browser\\journey.spec.js",
+                    "column": 49,
+                    "line": 64
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "33c61cd1f2a4400db853-21da746e9d4d92ac8913",
+          "file": "journey.spec.js",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "storefront.spec.js",
+      "file": "storefront.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "global search, price filters, sorting and pagination work",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 300000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6500,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-05T09:11:02.343Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1a751405fdc293de64aa-3eb807f6321bd00a1511",
+          "file": "storefront.spec.js",
+          "line": 3,
+          "column": 1
+        },
+        {
+          "title": "department drawer supports navigation and keyboard close",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 300000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2362,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-05T09:11:08.908Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1a751405fdc293de64aa-c4e1710a4a993c00bf26",
+          "file": "storefront.spec.js",
+          "line": 36,
+          "column": 1
+        },
+        {
+          "title": "guest save returns through login, ratings persist, and image zoom works",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 300000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 11681,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-05T09:11:11.351Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1a751405fdc293de64aa-5820767126e782b5e8c9",
+          "file": "storefront.spec.js",
+          "line": 50,
+          "column": 1
+        },
+        {
+          "title": "global search, price filters, sorting and pagination work",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 300000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "phone",
+              "projectName": "phone",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8488,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-05T09:12:31.885Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1a751405fdc293de64aa-441ca2796da3abb824f2",
+          "file": "storefront.spec.js",
+          "line": 3,
+          "column": 1
+        },
+        {
+          "title": "department drawer supports navigation and keyboard close",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 300000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "phone",
+              "projectName": "phone",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1972,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-05T09:12:41.825Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1a751405fdc293de64aa-4c448cfc4b6b8f15f5a8",
+          "file": "storefront.spec.js",
+          "line": 36,
+          "column": 1
+        },
+        {
+          "title": "guest save returns through login, ratings persist, and image zoom works",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 300000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "phone",
+              "projectName": "phone",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8032,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-05T09:12:43.877Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1a751405fdc293de64aa-e709252ff5ab45edb524",
+          "file": "storefront.spec.js",
+          "line": 50,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-05T09:09:42.909Z",
+    "duration": 189392.76200000002,
+    "expected": 11,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}
