@@ -11,12 +11,14 @@
 [![Security](https://img.shields.io/badge/Security-Argon2id_%2B_CSRF_%2B_RBAC-2E7D32?style=for-the-badge)](#5-user-profile-privacy--admin-governance-workflow)
 [![Tests](https://img.shields.io/badge/Verified-Pytest_%2B_Playwright_E2E-6E40C9?style=for-the-badge)](#8-quick-start--local-commands)
 
-[![Deploy with Vercel](https://img.shields.io/badge/Deploy_Frontend-Vercel_(Free)-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FTanvir284%2Fatlasrec-personalized-recommendation-engine&root-directory=apps/web&env=API_INTERNAL_URL)
-[![Deploy to Render](https://img.shields.io/badge/Deploy_Full_Stack-Render_(Free)-46E3B7?style=for-the-badge&logo=render&logoColor=black)](https://render.com/deploy?repo=https://github.com/Tanvir284/atlasrec-personalized-recommendation-engine)
-[![Hugging Face Spaces](https://img.shields.io/badge/Deploy_16GB_RAM-Hugging_Face_Docker_(Free)-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)](docs/DEPLOYMENT.md)
+[![Live Demo](https://img.shields.io/badge/🚀_LIVE_DEMO-ruhittanvir14--atlasrec.hf.space-00C853?style=for-the-badge)](https://ruhittanvir14-atlasrec.hf.space)
+[![Hugging Face Space](https://img.shields.io/badge/🤗_Hugging_Face_Space-ruhittanvir14%2Fatlasrec-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)](https://huggingface.co/spaces/ruhittanvir14/atlasrec)
 
 <p align="center">
-  <b>Built by <a href="https://github.com/Tanvir284">Md Tanvir Islam</a></b> · Full-Stack AI/ML Systems & Product Engineering Portfolio
+  <b>🌐 Live Storefront:</b> <a href="https://ruhittanvir14-atlasrec.hf.space">https://ruhittanvir14-atlasrec.hf.space</a> &nbsp;|&nbsp;
+  <b>🎛️ Live Taste Studio:</b> <a href="https://ruhittanvir14-atlasrec.hf.space/for-you">/for-you</a> &nbsp;|&nbsp;
+  <b>🔬 Live Admin Workbench:</b> <a href="https://ruhittanvir14-atlasrec.hf.space/admin">/admin</a><br/>
+  <sub><b>Demo Admin Login:</b> <code>admin@atlasrec.local</code> / <code>AtlasDemo!2026</code> · Built by <a href="https://github.com/Tanvir284">Md Tanvir Islam</a></sub>
 </p>
 
 ---
