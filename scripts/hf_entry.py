@@ -113,6 +113,7 @@ def main():
     api_env["API_INTERNAL_URL"] = "http://127.0.0.1:8000"
     api_env["HOST"] = "127.0.0.1"
     api_env["PORT"] = "8000"
+    api_env["COOKIE_SECURE"] = "true"
 
     print("[AtlasRec HF] Launching FastAPI + 20,500-Product ML Engine on 127.0.0.1:8000...", flush=True)
     subprocess.Popen([sys.executable, "scripts/live_server.py"], cwd=str(ROOT_DIR), env=api_env)

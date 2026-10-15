@@ -27,13 +27,14 @@ router = APIRouter(prefix="/api/v1/auth", tags=["auth"])
 def get_csrf(request: Request, response: Response, db=Depends(db_session)):
     actor_key(request, current_user(request, db), response)
     session = current_session(request, db)
-    value = request.cookies.get("atlas_csrf")
+    value = request.cookies.get("atlas_csrf") or request.headers.get("x-csrf-token")
     if not value or (session and not secrets.compare_digest(session.csrf_hash, token_hash(value))):
         value = secrets.token_urlsafe(32)
         if session:
             session.csrf_hash = token_hash(value)
             db.commit()
-    response.set_cookie("atlas_csrf", value, secure=settings.cookie_secure, samesite="lax",
+    samesite = "none" if settings.cookie_secure else "lax"
+    response.set_cookie("atlas_csrf", value, secure=settings.cookie_secure, samesite=samesite,
                         max_age=7 * 86400, path="/")
     return {"csrf_token": value}
 
@@ -55,7 +56,11 @@ def register(body: Registration, request: Request, response: Response, db=Depend
             raise HTTPException(409, "Email already registered") from None
         raise
     csrf_token = start_session(user, request, response, db)
-    return {"user": user_json(user), "csrf_token": csrf_token}
+    return {
+        "user": user_json(user),
+        "csrf_token": csrf_token,
+        "session_token": response.headers.get("x-session-token"),
+    }
 
 
 @router.post("/login", dependencies=[Depends(mutation)])
@@ -65,12 +70,16 @@ def login(body: Credentials, request: Request, response: Response, db=Depends(db
     if not user or not verify_password(user.password_hash, body.password):
         raise HTTPException(401, "Invalid email or password")
     csrf_token = start_session(user, request, response, db)
-    return {"user": user_json(user), "csrf_token": csrf_token}
+    return {
+        "user": user_json(user),
+        "csrf_token": csrf_token,
+        "session_token": response.headers.get("x-session-token"),
+    }
 
 
 @router.post("/logout", dependencies=[Depends(mutation)])
 def logout(request: Request, response: Response, db=Depends(db_session)):
-    token = request.cookies.get("atlas_session")
+    token = request.cookies.get("atlas_session") or request.headers.get("x-session-token")
     if token:
         db.execute(delete(Session).where(Session.token_hash == token_hash(token)))
     db.commit()
