@@ -2,15 +2,28 @@
 from __future__ import annotations
 
 import os
+import subprocess
+import sys
 from pathlib import Path
 
-os.environ["ATLASREC_PROFILE"] = "research"
-os.environ["ATLASREC_ENV"] = "test"
-os.environ["RESEARCH_DATASET_ID"] = "58ef700cbbdd0206"
-os.environ["ARTIFACT_DIR"] = str(Path("artifacts").resolve())
-os.environ["DATA_DIR"] = str(Path("data").resolve())
-os.environ["DATABASE_URL"] = "sqlite:///" + str(Path("data/atlasrec-live.db").resolve()).replace("\\", "/")
-os.environ["REDIS_URL"] = "redis://localhost:6379/15"
+os.environ.setdefault("ATLASREC_PROFILE", "research")
+os.environ.setdefault("ATLASREC_ENV", "test")
+os.environ.setdefault("RESEARCH_DATASET_ID", "58ef700cbbdd0206")
+os.environ.setdefault("ARTIFACT_DIR", str(Path("artifacts").resolve()))
+os.environ.setdefault("DATA_DIR", str(Path("data").resolve()))
+os.environ.setdefault(
+    "DATABASE_URL",
+    "sqlite:///" + str(Path("data/atlasrec-live.db").resolve()).replace("\\", "/"),
+)
+os.environ.setdefault("REDIS_URL", "redis://localhost:6379/15")
+
+db_file = Path("data/atlasrec-live.db")
+catalog_file = Path("data/research/tech-catalog-300.json")
+if not db_file.exists() or db_file.stat().st_size < 65536:
+    print("[AtlasRec Cloud Bootstrap] Initializing catalog and ML models...", flush=True)
+    if not catalog_file.exists():
+        subprocess.run([sys.executable, "scripts/generate_tech_catalog.py"], check=True)
+    subprocess.run([sys.executable, "scripts/train_and_install_tech.py"], check=True)
 
 import uvicorn
 from atlasrec_api import cache
@@ -19,9 +32,9 @@ from atlasrec_api.queue import celery
 from atlasrec_api.settings import settings
 
 settings.profile = "research"
-settings.research_dataset_id = "58ef700cbbdd0206"
-settings.artifact_dir = Path("artifacts").resolve()
-settings.data_dir = Path("data").resolve()
+settings.research_dataset_id = os.environ["RESEARCH_DATASET_ID"]
+settings.artifact_dir = Path(os.environ["ARTIFACT_DIR"]).resolve()
+settings.data_dir = Path(os.environ["DATA_DIR"]).resolve()
 
 
 class _InMemoryPipeline:
@@ -101,4 +114,6 @@ except Exception:
         celery.send_task = lambda *args, **kwargs: None
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="127.0.0.1", port=8000)
+    host = os.environ.get("HOST", "0.0.0.0")
+    port = int(os.environ.get("PORT", "8000"))
+    uvicorn.run(app, host=host, port=port)

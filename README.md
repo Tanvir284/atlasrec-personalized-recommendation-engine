@@ -9,7 +9,11 @@
 [![Machine Learning](https://img.shields.io/badge/ML_Engine-6_Algorithms_%2B_FAISS_Vector_Search-FF6F00?style=for-the-badge&logo=scikit-learn&logoColor=white)](#6-machine-learning--mathematical-architecture)
 [![Catalog Scale](https://img.shields.io/badge/Catalog-20,500%2B_Real_Products_%7C_250_Departments-007185?style=for-the-badge)](#3-visual-product-tour--step-by-step-workflow)
 [![Security](https://img.shields.io/badge/Security-Argon2id_%2B_CSRF_%2B_RBAC-2E7D32?style=for-the-badge)](#5-user-profile-privacy--admin-governance-workflow)
-[![Tests](https://img.shields.io/badge/Verified-Pytest_%2B_Playwright_E2E-6E40C9?style=for-the-badge)](#8-quick-start--reproducibility)
+[![Tests](https://img.shields.io/badge/Verified-Pytest_%2B_Playwright_E2E-6E40C9?style=for-the-badge)](#8-quick-start--local-commands)
+
+[![Deploy with Vercel](https://img.shields.io/badge/Deploy_Frontend-Vercel_(Free)-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FTanvir284%2Fatlasrec-personalized-recommendation-engine&root-directory=apps/web&env=API_INTERNAL_URL)
+[![Deploy to Render](https://img.shields.io/badge/Deploy_Full_Stack-Render_(Free)-46E3B7?style=for-the-badge&logo=render&logoColor=black)](https://render.com/deploy?repo=https://github.com/Tanvir284/atlasrec-personalized-recommendation-engine)
+[![Hugging Face Spaces](https://img.shields.io/badge/Deploy_16GB_RAM-Hugging_Face_Docker_(Free)-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)](docs/DEPLOYMENT.md)
 
 <p align="center">
   <b>Built by <a href="https://github.com/Tanvir284">Md Tanvir Islam</a></b> · Full-Stack AI/ML Systems & Product Engineering Portfolio

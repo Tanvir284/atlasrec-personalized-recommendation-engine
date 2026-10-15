@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: atlasrec-platform
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: PORT
+        value: "7860"
+      - key: ATLASREC_PROFILE
+        value: research
+      - key: ATLASREC_ENV
+        value: test
