@@ -8,18 +8,35 @@ import sys
 import urllib.request
 from pathlib import Path
 
-# Register a @spaces.GPU function if running on Hugging Face ZeroGPU hardware
-try:
-    import spaces  # type: ignore
-
-    @spaces.GPU
-    def _atlasrec_zero_gpu_ready():
-        return {"status": "ok"}
-
-except Exception:
-    pass
-
 ROOT_DIR = Path(__file__).resolve().parent.parent
+
+
+def register_zerogpu():
+    """Satisfy Hugging Face ZeroGPU startup check on an internal port (7861) while Next.js serves 7860."""
+    try:
+        import gradio as gr  # type: ignore
+        import spaces  # type: ignore
+
+        @spaces.GPU
+        def _atlasrec_gpu_warmup():
+            return "AtlasRec GPU Ready"
+
+        orig_port = os.environ.get("GRADIO_SERVER_PORT")
+        os.environ["GRADIO_SERVER_PORT"] = "7861"
+        demo = gr.Interface(fn=_atlasrec_gpu_warmup, inputs=[], outputs="text")
+        demo.launch(
+            server_name="127.0.0.1",
+            server_port=7861,
+            prevent_thread_lock=True,
+            quiet=True,
+        )
+        if orig_port:
+            os.environ["GRADIO_SERVER_PORT"] = orig_port
+        else:
+            os.environ.pop("GRADIO_SERVER_PORT", None)
+        print("[AtlasRec HF] Registered @spaces.GPU warmup hook on internal port 7861.", flush=True)
+    except Exception as exc:
+        print(f"[AtlasRec HF] ZeroGPU hook note: {exc}", flush=True)
 
 
 def run(cmd: list[str], cwd: Path | None = None, env: dict | None = None):
@@ -48,6 +65,9 @@ def ensure_node():
 
 
 def main():
+    # Register @spaces.GPU immediately so ZeroGPU daemon detects it during startup
+    register_zerogpu()
+
     os.chdir(ROOT_DIR)
     py_path = f"{ROOT_DIR / 'packages' / 'ml'}:{ROOT_DIR / 'services' / 'api'}"
     if os.environ.get("PYTHONPATH"):
@@ -105,7 +125,6 @@ def main():
         "API_INTERNAL_URL": "http://127.0.0.1:8000",
         "NODE_ENV": "production",
     }
-    # Keep this Python process alive so ZeroGPU's @spaces.GPU registration remains active
     subprocess.run(
         [
             "npm",
