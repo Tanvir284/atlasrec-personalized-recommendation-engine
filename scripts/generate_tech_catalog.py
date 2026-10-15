@@ -343,6 +343,7 @@ def generate_multi_category_dataset(target_products: int = 20500, target_categor
 
 
 if __name__ == "__main__":
+    import gc
     import os
 
     default_target = "6500" if os.environ.get("RENDER") else "20500"
@@ -350,10 +351,13 @@ if __name__ == "__main__":
     out = generate_multi_category_dataset(target_products=target_n, target_categories=250)
     dest = Path("data/research/tech-catalog-300.json")
     dest.parent.mkdir(parents=True, exist_ok=True)
-    dest.write_text(json.dumps(out, separators=(",", ":")), encoding="utf-8")
+    with dest.open("w", encoding="utf-8") as handle:
+        json.dump(out, handle, separators=(",", ":"))
     print(
         f"Saved {len(out['products'])} products and {len(out['events'])} events "
         f"across {out['manifest']['categories_count']} categories to {dest} "
         f"(dataset_id={out['manifest']['dataset_id']})",
         flush=True,
     )
+    del out
+    gc.collect()

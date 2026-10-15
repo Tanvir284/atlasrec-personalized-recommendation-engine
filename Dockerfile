@@ -40,16 +40,19 @@ COPY configs configs
 COPY alembic.ini ./
 COPY apps/web apps/web
 
-# Finalize Python workspace & build Next.js production bundle
+# Finalize Python workspace, build Next.js production bundle & pre-build catalog + ML artifacts at image build time
 RUN uv sync --frozen --no-dev --python /usr/local/bin/python \
     && npm run build --workspace apps/web \
+    && mkdir -p artifacts data/research docs/evidence \
+    && /app/.venv/bin/python scripts/generate_tech_catalog.py \
+    && /app/.venv/bin/python scripts/train_and_install_tech.py \
+    && rm -f data/research/tech-catalog-300.json \
     && chmod +x scripts/start-cloud.sh
 
 ENV PATH="/app/.venv/bin:$PATH"
 
 # Create non-root user (UID 1000 required by Hugging Face Spaces)
 RUN useradd -m -u 1000 atlasrec \
-    && mkdir -p artifacts data/research docs/evidence \
     && chown -R atlasrec:atlasrec /app
 
 USER atlasrec

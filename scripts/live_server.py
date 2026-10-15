@@ -27,14 +27,20 @@ if not db_file.exists() or db_file.stat().st_size < 65536:
 
 import uvicorn
 from atlasrec_api import cache
+from atlasrec_api.db import DatasetVersion, SessionLocal
 from atlasrec_api.main import app
 from atlasrec_api.queue import celery
 from atlasrec_api.settings import settings
+from sqlalchemy import select
 
 settings.profile = "research"
-settings.research_dataset_id = os.environ["RESEARCH_DATASET_ID"]
 settings.artifact_dir = Path(os.environ["ARTIFACT_DIR"]).resolve()
 settings.data_dir = Path(os.environ["DATA_DIR"]).resolve()
+with SessionLocal() as _db:
+    _ds = _db.get(DatasetVersion, os.environ["RESEARCH_DATASET_ID"]) or _db.scalar(
+        select(DatasetVersion).where(DatasetVersion.profile == "research")
+    )
+    settings.research_dataset_id = _ds.id if _ds else os.environ["RESEARCH_DATASET_ID"]
 
 
 class _InMemoryPipeline:

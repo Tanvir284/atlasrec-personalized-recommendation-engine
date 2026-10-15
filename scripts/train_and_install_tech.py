@@ -60,10 +60,12 @@ def main():
         )
         val_metrics = evaluate(eval_model, val_sample, bootstrap=False)
         test_metrics = evaluate(eval_model, test_sample, bootstrap=False)
+        del eval_model
 
         serving_model = Recommender(model_name, {"seed": 42, "dimension": 24, "threads": 2, "memory_budget_mb": 2048}).fit(
             data.products, data.events
         )
+        training_secs = serving_model.training_seconds
         manifest = save_bundle(
             serving_model,
             bundle_dir,
@@ -78,10 +80,13 @@ def main():
                     "latest_event_timestamp": max(e["timestamp"] for e in data.events),
                     "app_feedback_events": 0,
                     "status": "completed",
-                    "training_seconds": serving_model.training_seconds,
+                    "training_seconds": training_secs,
                 },
             },
         )
+        del serving_model
+        import gc
+        gc.collect()
         load_bundle(bundle_dir)
         record = {
             "id": version_id,
@@ -94,14 +99,14 @@ def main():
             "status": "completed",
             "validation": val_metrics,
             "metrics": test_metrics,
-            "training_seconds": serving_model.training_seconds,
+            "training_seconds": training_secs,
             "bundle": str(bundle_dir.resolve()),
             "bundle_manifest": manifest,
             "serving_refit": manifest["serving_refit"],
         }
         runs.append(record)
         print(
-            f"  [OK] {version_id} trained in {serving_model.training_seconds:.2f}s "
+            f"  [OK] {version_id} trained in {training_secs:.2f}s "
             f"(val NDCG@10={val_metrics['ndcg@10']:.4f})",
             flush=True,
         )
