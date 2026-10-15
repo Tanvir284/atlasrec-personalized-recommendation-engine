@@ -46,8 +46,21 @@ def require_admin(request, db):
     return user
 
 
+def _origin_allowed(origin: str | None) -> bool:
+    if not origin:
+        return False
+    allowed = [o.strip() for o in settings.allowed_origins.split(",") if o.strip()]
+    if origin in allowed:
+        return True
+    if origin.startswith("https://") and origin.endswith(
+        (".hf.space", ".huggingface.co", ".onrender.com", ".vercel.app")
+    ):
+        return True
+    return False
+
+
 def csrf(request, db):
-    if request.headers.get("origin") not in settings.allowed_origins.split(","):
+    if not _origin_allowed(request.headers.get("origin")):
         raise HTTPException(403, "Origin is not allowed")
     token = request.headers.get("x-csrf-token", "")
     if not token or not secrets.compare_digest(token, request.cookies.get("atlas_csrf", "")):
