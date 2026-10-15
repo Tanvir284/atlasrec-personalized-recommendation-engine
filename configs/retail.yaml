@@ -1,0 +1,28 @@
+profile: research
+category: Luxury_Beauty
+source_format: amazon2018_ratings
+reviews_path: data/research/luxury-beauty-2018/Luxury_Beauty.csv
+metadata_path: data/research/luxury-beauty-2018/meta_Luxury_Beauty.json.gz
+source_url: https://cseweb.ucsd.edu/~jmcauley/datasets/amazon_v2/
+terms_url: https://cseweb.ucsd.edu/~jmcauley/datasets/amazon_v2/
+source_label: Amazon Reviews 2018 - Luxury Beauty
+max_interactions: 100000
+max_scan_rows: 600000
+user_sample_fraction: 1
+require_complete_histories: true
+# Select on the training period only, before inspecting validation/test outcomes.
+min_train_user_positives: 3
+seed: 42
+positive_threshold: 4
+epochs: 4
+dimension: 24
+threads: 2
+negative_samples: 4
+time_budget: 300
+memory_budget_mb: 1024
+candidate_k: 50
+seeds: [42]
+models: [popularity, item_cf, two_tower]
+cold_item_fraction: 0
+refit_for_serving: true
+evidence_name: retail

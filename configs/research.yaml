@@ -1,0 +1,22 @@
+profile: research
+category: Digital_Music
+# Supply official review/metadata JSONL(.gz) files. Never substitute demo data.
+reviews_path: data/research/Digital_Music.jsonl.gz
+metadata_path: data/research/meta_Digital_Music.jsonl.gz
+source_url: https://amazon-reviews-2023.github.io/
+terms_url: https://amazon-reviews-2023.github.io/
+max_interactions: 100000
+max_scan_rows: 200000
+user_sample_fraction: 0.05
+seed: 42
+positive_threshold: 4
+epochs: 6
+dimension: 16
+threads: 2
+negative_samples: 4
+time_budget: 120
+memory_budget_mb: 1024
+candidate_k: 50
+seeds: [42, 43, 44]
+models: [popularity, item_cf, bpr, two_tower, two_tower_id, ranker]
+cold_item_fraction: 0.1

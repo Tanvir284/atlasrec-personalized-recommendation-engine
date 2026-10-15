@@ -1,0 +1,15 @@
+node_modules
+**/.next
+.venv
+.tools
+.cache
+.git
+.env
+data
+artifacts
+test-results
+playwright-report
+
+**/.env.local
+**/.env.production
+**/.env.development

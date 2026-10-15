@@ -1,0 +1,15 @@
+profile: demo
+seed: 42
+products: 200
+users: 100
+interactions: 3000
+epochs: 12
+dimension: 24
+threads: 2
+negative_samples: 4
+time_budget: 300
+memory_budget_mb: 1024
+candidate_k: 50
+seeds: [42]
+models: [popularity, item_cf, bpr, two_tower, two_tower_id, ranker]
+cold_item_fraction: 0.1
