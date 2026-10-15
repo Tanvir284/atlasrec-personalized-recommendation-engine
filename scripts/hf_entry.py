@@ -8,6 +8,17 @@ import sys
 import urllib.request
 from pathlib import Path
 
+# Register a @spaces.GPU function if running on Hugging Face ZeroGPU hardware
+try:
+    import spaces  # type: ignore
+
+    @spaces.GPU
+    def _atlasrec_zero_gpu_ready():
+        return {"status": "ok"}
+
+except Exception:
+    pass
+
 ROOT_DIR = Path(__file__).resolve().parent.parent
 
 
@@ -88,8 +99,14 @@ def main():
 
     web_port = os.environ.get("GRADIO_SERVER_PORT") or os.environ.get("PORT") or "7860"
     print(f"[AtlasRec HF] Starting Next.js Storefront on 0.0.0.0:{web_port}...", flush=True)
-    os.execvpe(
-        "npm",
+    web_env = {
+        **os.environ,
+        "PYTHONPATH": py_path,
+        "API_INTERNAL_URL": "http://127.0.0.1:8000",
+        "NODE_ENV": "production",
+    }
+    # Keep this Python process alive so ZeroGPU's @spaces.GPU registration remains active
+    subprocess.run(
         [
             "npm",
             "run",
@@ -102,12 +119,9 @@ def main():
             "--port",
             str(web_port),
         ],
-        {
-            **os.environ,
-            "PYTHONPATH": py_path,
-            "API_INTERNAL_URL": "http://127.0.0.1:8000",
-            "NODE_ENV": "production",
-        },
+        cwd=str(ROOT_DIR),
+        env=web_env,
+        check=True,
     )
 
 
